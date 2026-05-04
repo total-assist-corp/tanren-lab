@@ -39,8 +39,8 @@
 					"slug": "sans-serif"
 				},
 				{
-					"fontFamily": "source-han-serif-japanese, sans-serif",
-					"name": "Source Han Serif",
+					"fontFamily": "'Noto Serif JP', serif",
+					"name": "Noto Serif JP",
 					"slug": "source-han-serif-japanese"
 				}
 			]
@@ -86,7 +86,6 @@
 			"heading": {
 				"typography": {
 					"fontFamily": "var(--wp--preset--font-family--source-han-serif-japanese)",
-					"fontStyle": "bold",
 					"fontWeight": "700"
 				}
 			},
