@@ -1,0 +1,34 @@
+$root-size: 16;
+
+$screen-xsmall:   520px !default; // Mobile
+$screen-small:    600px !default; // Mini Tablet
+$screen-medium:   782px !default; // Tablet - was 768px
+$screen-large:    1040px !default; // Desktop - was 960px
+$screen-xlarge:   1200px !default; // Large Desktop
+$screen-max:      2000px !default; // TV
+
+$screen-smartphone-portrait: 601px !default;
+
+$max-width-s: calc(640 / $root-size * 1rem);
+$max-width-m: calc(960 / $root-size * 1rem);
+$max-width-l: calc(1040 / $root-size * 1rem);
+
+$num-4px: 0.25rem;
+$num-8px: 0.5rem;
+$num-10px: 0.625rem;
+$num-12px: 0.75rem;
+$num-14px: 0.875rem;
+$num-16px: 1rem;
+$num-18px: 1.125rem;
+$num-20px: 1.25rem;
+$num-24px: 1.5rem;
+$num-28px: 1.75rem;
+$num-32px: 2rem;
+$num-36px: 2.25rem;
+$num-40px: 2.5rem;
+$num-48px: 3rem;
+$num-56px: 3.5rem;
+$num-64px: 4rem;
+$num-72px: 4.5rem;
+$num-80px: 5rem;
+$num-96px: 6rem;

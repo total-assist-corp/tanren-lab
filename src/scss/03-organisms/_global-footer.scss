@@ -1,0 +1,19 @@
+@use "../00-global" as *;
+
+.trl-global-footer {
+  &__top {
+    background-color: $col-grayscale-lighter;
+    margin-top: 160px;
+    padding: $num-80px 0;
+  }
+
+  &__bottom {
+    background-color: $black;
+    color: $white;
+    padding: $num-32px 0;
+    
+    p {
+      font-size: $num-14px;
+    }
+  }
+}

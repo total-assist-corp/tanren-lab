@@ -1,0 +1,25 @@
+@use "../00-global" as *;
+
+.wp-block-spacer {
+  margin: 0 !important;
+
+  &.h-32 {
+    height: 16px !important;
+    flex-basis: 16px;
+    
+    @media screen  and (min-width: $screen-medium) {
+      height: 32px !important;
+      flex-basis: 32px;
+    }
+  }
+
+  &.h-64 {
+    height: 48px !important;
+    flex-basis: 48px;
+  
+    @media screen  and (min-width: $screen-medium) {
+      height: 64px !important;
+      flex-basis: 64px;
+    }
+  }
+}

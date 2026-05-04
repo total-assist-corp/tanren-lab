@@ -1,0 +1,123 @@
+{
+	"settings": {
+		"appearanceTools": true,
+		"color": {
+			"defaultPalette": false,
+			"palette": [
+				{
+					"color": "#ffffff",
+					"name": "Base",
+					"slug": "base"
+				},
+				{
+					"color": "#999999",
+					"name": "Contrast",
+					"slug": "contrast"
+				},
+				{
+					"color": "#ff0000",
+					"name": "Primary",
+					"slug": "primary"
+				},
+				{
+					"color": "#000000",
+					"name": "Secondary",
+					"slug": "secondary"
+				},
+				{
+					"color": "#f2f2f2",
+					"name": "Tertiary",
+					"slug": "tertiary"
+				}
+			]
+		},
+		"typography": {
+			"fontFamilies": [
+				{
+					"fontFamily": "sans-serif",
+					"name": "Sans Serif",
+					"slug": "sans-serif"
+				},
+				{
+					"fontFamily": "source-han-serif-japanese, sans-serif",
+					"name": "Source Han Serif",
+					"slug": "source-han-serif-japanese"
+				}
+			]
+		}
+	},
+	"styles": {
+		"elements": {
+			"button": {
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--source-han-serif-japanese)"
+				}
+			},
+			"h1": {
+				"typography": {
+					"fontSize": "56px"
+				}
+			},
+			"h2": {
+				"typography": {
+					"fontSize": "48px"
+				}
+			},
+			"h3": {
+				"typography": {
+					"fontSize": "40px"
+				}
+			},
+			"h4": {
+				"typography": {
+					"fontSize": "32px"
+				}
+			},
+			"h5": {
+				"typography": {
+					"fontSize": "24px"
+				}
+			},
+			"h6": {
+				"typography": {
+					"fontSize": "20px"
+				}
+			},
+			"heading": {
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--source-han-serif-japanese)",
+					"fontStyle": "bold",
+					"fontWeight": "700"
+				}
+			},
+			"link": {
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--source-han-serif-japanese)"
+				}
+			}
+		},
+		"typography": {
+			"fontFamily": "var(--wp--preset--font-family--source-han-serif-japanese)",
+			"fontStyle": "normal",
+			"fontWeight": "400"
+		},
+		"blocks": {
+			"core/paragraph": {
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--source-han-serif-japanese)",
+					"fontStyle": "normal",
+					"fontWeight": "400"
+				}
+			},
+			"core/list-item": {
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--source-han-serif-japanese)",
+					"fontStyle": "normal",
+					"fontWeight": "400"
+				}
+			}
+		}
+	},
+	"version": 2,
+	"$schema": "https://schemas.wp.org/wp/6.5/theme.json"
+}

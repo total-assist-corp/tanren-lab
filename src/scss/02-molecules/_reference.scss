@@ -1,0 +1,59 @@
+@use "../00-global" as *;
+
+.reference-box {
+  &__container {
+    padding: $num-32px;
+
+    &.type-border-black {
+      border: 1px solid $black;
+    }
+
+    &.type-border-red {
+      border: 1px solid $col-primary;
+    }
+
+    &.type-bg-pink {
+      background-color: $col-primary-light;
+    }
+
+    &.type-bg-gray {
+      background-color: $col-grayscale-lighter;
+    }
+
+    &.type-bg-dark-gray {
+      background-color: $col-grayscale-light;
+    }
+  }
+}
+
+.callout-box {
+  &__container {
+    padding: $num-32px;
+
+    @media screen and (min-width: $screen-medium) {
+      padding: $num-48px;
+    }
+  
+    @media screen and (min-width: $screen-large) {
+      padding: $num-80px;
+    }
+
+    &.type-bg-gray {
+      background-color: $col-grayscale-lighter;
+    }
+
+    &.type-bg-black {
+      background-color: $black;
+
+      h6,
+      p {
+        color: $white;
+      }
+    }
+
+    .type-insert-note {
+      font-size: $num-16px;
+      margin: $num-16px 0 $num-48px !important;
+    }
+  }
+}

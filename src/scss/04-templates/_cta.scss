@@ -1,0 +1,31 @@
+@use "../00-global" as *;
+
+.cta-contact {
+  &__group {
+    flex-direction: column;
+    align-items: center;
+    gap: $num-32px;
+
+    @media screen and (min-width: $screen-medium) {
+      flex-direction: row;
+      align-items: flex-start;
+      gap: $num-48px;
+    }
+  
+    @media screen and (min-width: $screen-large) {
+      gap: $num-80px;
+    }
+  }
+
+  &__item {
+    flex: 1;
+
+    &--logo {
+      margin: 0 0 $num-32px;
+    }
+
+    &--note {
+      font-size: $num-16px;
+    }
+  }
+}

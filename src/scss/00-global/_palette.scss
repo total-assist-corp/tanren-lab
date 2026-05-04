@@ -1,0 +1,42 @@
+// Brand Colours
+$white: #FFFFFF;
+$black: #000000;
+$sky-light: #9AC9F3;
+$sky-dark: #01519F;
+
+$col-primary-lighter: #EFFBFE;
+$col-primary-light: #FFF1F1;
+$col-primary: #EE0000;
+$col-primary-dark: #FF9E04;
+$col-primary-darker: #004D9F;
+
+$col-secondary-light: #FCF5D3;
+$col-secondary: #B6986E;
+$col-secondary-dark: #D0A800;
+
+$col-grayscale-lighter: #F3F7F9;
+$col-grayscale-light: #D8E5EC;
+$col-grayscale: #CCCCCC;
+$col-grayscale-dark: #666666;
+$col-grayscale-darker: #333333;
+
+// Font Colours
+$col-heading: $col-grayscale-darker;
+$col-copy: $col-grayscale-dark;
+$col-quiet: $col-grayscale;
+
+// UI Colours
+$col-border: $col-grayscale-light;
+$col-background: $col-grayscale-lighter;
+$col-required: #FF0000;
+// $col-label: $col-secondary-darker;
+$col-checked: $col-primary;
+
+// Link
+// $col-button-default: $col-primary-darker;
+$col-link-hover: $col-primary;
+$col-link-active: $col-primary;
+$col-link-inactive: $col-grayscale;
+
+// Third party
+$col-line: #06C755;

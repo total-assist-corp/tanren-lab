@@ -1,0 +1,94 @@
+@use "../00-global" as *;
+
+.button {
+  &__group {
+    flex-direction: column;
+    gap: $num-16px;
+    width: 100%;
+
+    @media screen and (min-width: $screen-medium) {
+      flex-direction: row;
+      gap: $num-32px;
+    }
+  }
+
+  &__item {
+    flex: 1;
+    width: 100%;
+
+    .main,
+    .sub {
+      display: block;
+    }
+
+    .main {
+      font-size: clamp($num-20px, 0.782rem + 0.96vw, $num-24px);
+    }
+
+    .main-s {
+      font-size: clamp($num-16px, 0.532rem + 0.96vw, $num-20px);
+    }
+
+    .sub {
+      font-size: clamp($num-12px, 0.516rem + 0.48vw, $num-14px);
+    }
+
+    .sub-s {
+      font-size: clamp($num-10px, 0.391rem + 0.48vw, $num-12px);
+    }
+  }
+}
+
+.button-type {
+  &__primary {
+    a {
+      background-color: $col-primary;
+      border-radius: 0;
+      color: $white;
+
+      &:hover {
+        background-color: $col-secondary;
+      }
+    }
+  }
+
+  &__secondary {
+    a {
+      background-color: $black;
+      border-radius: 0;
+      color: $white;
+
+      &:hover {
+        background-color: $col-secondary;
+      }
+    }
+  }
+
+  &__dotted {
+    a {
+      background-color: transparent;
+      border: 1px dotted $black;
+      border-radius: 0;
+      color: $black;
+
+      &:hover {
+        border-color: $col-secondary;
+        color: $col-secondary;
+      }
+    }
+  }
+
+  &__dotted-inversed {
+    a {
+      background-color: transparent;
+      border: 1px dotted $white;
+      border-radius: 0;
+      color: $white;
+
+      &:hover {
+        border-color: $col-secondary;
+        color: $col-secondary;
+      }
+    }
+  }
+}

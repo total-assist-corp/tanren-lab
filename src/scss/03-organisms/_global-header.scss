@@ -1,0 +1,7 @@
+@use "../00-global" as *;
+
+.trl-global-header {
+  background-color: $col-grayscale-lighter;
+  margin-bottom: 112px;
+  padding: $num-32px 0;
+}

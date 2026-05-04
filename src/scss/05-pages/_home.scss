@@ -1,0 +1,273 @@
+@use "../00-global" as *;
+
+.trl-profile {
+   h2 {
+    margin: 0 0 $num-64px;
+  }
+
+  h6 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    &:before {
+      display: inline-block;
+      content: "";
+      mask-size: $num-32px $num-32px;
+      background-color: $col-primary;
+      width: $num-32px;
+      height: $num-32px;
+      margin-right: $num-4px;
+    } 
+
+    &.type-icon-certificate {
+      &:before {
+        mask-image: url("/assets/images/icon__certificate.svg");
+      }
+    }
+
+    &.type-icon-career {
+      &:before {
+        mask-image: url("/assets/images/icon__career.svg");
+      }
+    }
+
+    &.type-icon-speech {
+      &:before {
+        mask-image: url("/assets/images/icon__speech.svg");
+      }
+    }
+
+    &.type-icon-column {
+      &:before {
+        mask-image: url("/assets/images/icon__column.svg");
+      }
+    }
+  }
+
+  .biography {
+    &__group {
+      align-items: center;
+      gap: $num-48px;
+
+      @media screen and (min-width: $screen-medium) {
+        align-items: flex-start;
+      }
+    }
+
+    &__item {
+      &--job-title {
+        font-size: $num-16px;
+        color: $col-grayscale-dark;
+      }
+
+      &--name {
+        font-size: clamp($num-40px, 2.118rem + 1.18vw, $num-48px);
+        font-weight: 600;
+      }
+
+      &--rubi {
+        font-size: clamp($num-16px, 0.809rem + 0.59vw, $num-20px);
+        color: $col-primary;
+      }
+
+      &--quote {
+        font-size: clamp($num-20px, 0.676rem + 1.76vw, $num-32px);
+        font-style: italic;
+        font-weight: 600;
+        margin: $num-32px 0 !important;
+
+        @media screen and (min-width: $screen-medium) {
+          margin: $num-64px 0 !important;
+        }
+      }
+
+      &--description {
+
+      }
+
+      &:first-child {
+        flex: 0 1 100%;
+        max-width: 240px;
+
+        @media screen and (min-width: $screen-medium) {
+          max-width: 200px;
+        }
+
+        @media screen and (min-width: $screen-large) {
+          max-width: 368px;
+        }
+      }
+
+      &:last-child {
+        flex: 0 1 100%;
+
+        @media screen and (min-width: $screen-medium) {
+          flex: 0 1 calc(100% - ($num-48px + 200px));
+        }
+
+        @media screen and (min-width: $screen-large) {
+          flex: 0 1 calc(100% - ($num-48px + 368px));
+        }
+      }
+    }
+  }
+
+  ul {
+    padding: 0 0 0 $num-24px;
+  }
+
+  li {
+    font-size: $num-16px;
+  }
+}
+
+.trl-philosophy {
+ h2 {
+  margin: 0 0 $num-64px;
+ }
+
+ h3 {
+  margin: $num-32px 0 $num-24px;
+ }
+
+ h4 {
+  margin: 0 0 $num-48px;
+ }
+
+ h5 {
+  color: $col-primary;
+  margin: $num-24px 0 $num-32px;
+ }
+
+ .paragraph {
+  &__lead {
+    &--centered {
+      text-align: left;
+
+      @media screen and (min-width: $screen-medium) {
+        text-align: center;
+      }
+    }
+  }
+ }
+}
+
+.trl-training-space {
+ h2 {
+  margin: 0 0 $num-64px;
+ }
+}
+
+.trl-pricing {
+  h2 {
+    margin: 0 0 $num-16px;
+  }
+
+  h3 {
+    margin: $num-32px 0;
+  }
+
+  .trial-price-box {
+    &__group {
+      gap: $num-32px;
+
+      @media screen and (min-width: $screen-medium) {
+        gap: $num-48px;
+      }
+    
+      @media screen and (min-width: $screen-large) {
+        gap: $num-80px;
+      }
+    }
+
+    &__item {
+      flex: 0 1 50%;
+
+      &--label {
+        font-size: $num-16px;
+        margin: 0 0 $num-16px;
+      }
+
+      &--price {
+        background-color: $col-grayscale-darker;
+        border-radius: $num-8px;
+        font-size: clamp($num-24px, 1.118rem + 1.18vw, $num-32px);
+        padding: $num-24px 0;
+        text-box: trim-both cap alphabetic;
+      }
+    }
+  }
+
+  .pricing-box {
+    &__group {
+
+    }
+
+    &__item {
+      background-color: $white;
+      box-shadow: 0 0 $num-8px rgba(0,0,0,0.16);
+      padding: $num-32px;
+      text-align: center;
+      
+      @media screen and (max-width: $screen-medium) {
+        width: 100%;
+        
+      }
+
+      &--icon {
+
+      }
+
+      &--name {
+        font-size: $num-20px;
+        font-weight: 700;
+      }
+
+      &--sub {
+        font-size: $num-14px;
+        color: $col-grayscale-dark;
+        margin: $num-4px 0 $num-16px !important;
+      }
+
+      &--price {
+        font-size: clamp($num-24px, 1.118rem + 1.18vw, $num-32px);
+        background-color: $col-grayscale-lighter;
+        border-radius: $num-8px;
+        padding: $num-16px 0;
+        text-box: trim-both cap alphabetic;
+      }
+
+      &:first-child {
+        .pricing-box__item--price {
+          background-color: $col-primary-light;
+          color: $col-primary;
+        }
+      }
+    }
+  }
+
+  .joining-fee-box {
+    &__container {
+
+    }
+
+    &__note {
+      font-size: $num-16px;
+      margin: $num-16px 0 $num-24px !important;
+    }
+
+    &__price {
+      font-size: clamp($num-24px, 1.118rem + 1.18vw, $num-32px);
+      background-color: $white;
+      border-radius: $num-8px;
+      padding: $num-16px $num-48px;
+      text-box: trim-both cap alphabetic;
+      width: fit-content;
+    }
+  }
+
+  h4 {
+    color: $col-primary;
+  }
+}

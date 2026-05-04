@@ -1,0 +1,210 @@
+@use "../00-global" as *;
+
+// .entry-content {
+//   & > section {
+//     margin-block-start: 120px;
+//     margin-block-end: 120px;
+//   }
+// }
+
+html {
+  scroll-behavior: smooth;
+}
+
+.section {
+  &__standard {
+    margin: 160px 0;
+    padding: 0 $num-16px;
+  
+    @media screen and (min-width: $screen-medium) {
+      padding: 0 $num-24px;
+    }
+  
+    @media screen and (min-width: $screen-xlarge) {
+      padding: 0;
+    }
+  }
+}
+
+// レイアウト幅の設定
+.w-520,
+.w-782 ,
+.w-1040,
+.w-1200 {
+  margin: 0 auto;
+}
+
+.w-520 {
+  max-width: $screen-xsmall;
+}
+
+.w-782 {
+  max-width: $screen-medium;
+}
+
+.w-1040 {
+  max-width: $screen-large;
+}
+
+.w-1200 {
+  max-width: $screen-xlarge;
+}
+
+// コラム数の設定
+.col-2 {
+  flex-direction: column;
+  gap: $num-64px;
+
+  @media screen and (min-width: $screen-medium) {
+    gap: $num-32px;
+    flex-direction: row;
+  }
+
+  @media screen and (min-width: $screen-large) {
+    gap: $num-64px;
+  }
+
+  &.ratio-50-50 {
+    .wp-block-group {
+      flex: 0 1 100%;
+      width: 100%;
+
+      @media screen and (min-width: $screen-medium) {
+        flex: 0 1 calc((100% - $num-32px) / 2);
+      }
+    
+      @media screen and (min-width: $screen-large) {
+        flex: 0 1 calc((100% - $num-64px) / 2);
+      }
+    }
+  }
+}
+
+.col-3 {
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: $num-48px;
+
+  @media screen and (min-width: $screen-medium) {
+    gap: $num-48px;
+    flex-direction: row;
+    align-items: stretch;
+  }
+
+  @media screen and (min-width: $screen-large) {
+    gap: $num-48px;
+  }
+
+  .wp-block-group {
+    flex: 0 1 100%;
+    max-width: 360px;
+
+    @media screen and (min-width: $screen-medium) {
+      flex: 0 1 calc((100% - $num-48px) / 2);
+    }
+  
+    @media screen and (min-width: $screen-large) {
+      flex: 0 1 calc((100% - ($num-48px * 2)) / 3);
+    }
+
+    &.type__bg-red {
+      background-color: $col-primary-light;
+      padding: $num-32px;
+    }
+  }
+}
+
+.col-3-border {
+  &__group {
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+
+    @media screen and (min-width: $screen-medium) {
+      flex-direction: row;
+      align-items: stretch;
+    }
+  }
+
+  &__item {
+    flex: 0 1 100%;
+    max-width: 360px;
+    padding: $num-32px;
+
+    @media screen and (min-width: $screen-medium) {
+      flex: 0 1 calc(100% / 2);
+    }
+  
+    @media screen and (min-width: $screen-large) {
+      flex: 0 1 calc(100% / 3);
+      max-width: 100%;
+    }
+
+    &:first-child {
+      border-bottom: 1px solid $black;
+
+      @media screen and (min-width: $screen-medium) {
+        border-right: 1px solid $black;
+      }
+      
+      @media screen and (min-width: $screen-large) {
+        border-bottom: 0;
+      }
+    }
+
+    &:nth-child(2) {
+      border-bottom: 1px solid $black;
+
+      @media screen and (min-width: $screen-medium) {
+        border-right: 0;
+      }
+    
+      @media screen and (min-width: $screen-large) {
+        border-bottom: 0;
+        border-right: 1px solid $black;
+      }
+    }
+  }
+}
+
+// 背景色の設定
+.bg-gray {
+  background-color: $col-background;
+  padding: $num-48px 0;
+
+  @media screen and (min-width: $screen-small) {
+    padding: $num-64px 0;
+  }
+}
+
+.bg-blue {
+  background-color: $col-primary-lighter;
+  padding: $num-48px 0;
+
+  @media screen and (min-width: $screen-small) {
+    padding: $num-64px 0;
+  }
+}
+
+.bg-white {
+  background-color: $white;
+  margin: $num-64px 0;
+
+  @media screen and (min-width: $screen-small) {
+    margin: $num-96px 0;
+  }
+}
+
+.bg-vision {
+  background: linear-gradient(to right, $sky-light, $sky-light, $sky-dark, $sky-dark);
+  margin-block-end: $num-64px;
+}
+
+.bg-hero {
+  background: linear-gradient(to bottom, $white, $col-primary-light);
+}
+
