@@ -58,7 +58,7 @@
     &__item {
       &--job-title {
         font-size: $num-16px;
-        color: $col-grayscale-dark;
+        color: $col-grayscale-darker;
       }
 
       &--name {
@@ -160,43 +160,15 @@
 }
 
 .trl-pricing {
+  margin-block-start: 0;
+  margin-block-end: 0;
+  
   h2 {
     margin: 0 0 $num-16px;
   }
 
   h3 {
     margin: $num-32px 0;
-  }
-
-  .trial-price-box {
-    &__group {
-      gap: $num-32px;
-
-      @media screen and (min-width: $screen-medium) {
-        gap: $num-48px;
-      }
-    
-      @media screen and (min-width: $screen-large) {
-        gap: $num-80px;
-      }
-    }
-
-    &__item {
-      flex: 0 1 50%;
-
-      &--label {
-        font-size: $num-16px;
-        margin: 0 0 $num-16px;
-      }
-
-      &--price {
-        background-color: $col-grayscale-darker;
-        border-radius: $num-8px;
-        font-size: clamp($num-24px, 1.118rem + 1.18vw, $num-32px);
-        padding: $num-24px 0;
-        text-box: trim-both cap alphabetic;
-      }
-    }
   }
 
   .pricing-box {
@@ -226,7 +198,7 @@
 
       &--sub {
         font-size: $num-14px;
-        color: $col-grayscale-dark;
+        color: $col-grayscale-darker;
         margin: $num-4px 0 $num-16px !important;
       }
 
@@ -269,5 +241,101 @@
 
   h4 {
     color: $col-primary;
+  }
+}
+
+.trl-2col-full-width {
+  &__wrapper {
+    margin-block-start: 0;
+    margin-block-end: 0;
+  }
+
+  &__group {
+    flex-direction: column;
+    gap: 0;
+    align-items: stretch;
+
+    @media screen and (min-width: $screen-medium) {
+      flex-direction: row;
+    }
+  }
+
+  &__item {
+    flex: 1;
+    width: 100%;
+    gap: 0;
+
+    &:last-child {
+      border-left: 0;
+      border-top: 1px solid $white;
+      
+      @media screen and (min-width: $screen-medium) {
+        border-left: 1px solid $white;
+        border-top: 0;
+      }
+    }
+  }
+}
+
+.trl-2col-full-width-contents {
+  &__cover {
+    aspect-ratio: 3 / 2;
+    padding: 0;
+    min-height: unset;
+    width: 100%;
+
+    @media screen and (min-width: $screen-medium) {
+      aspect-ratio: 4 / 3;
+    }
+  }
+
+  &__container {
+    padding: clamp($num-24px, 0.353rem + 3.53vw, $num-48px) clamp($num-16px, -0.529rem + 4.71vw, $num-48px);
+  }
+
+  &__heading {
+    font-size: clamp(1rem, 0.618rem + 1.18vw, 1.5rem);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: clamp($num-8px, -0.265rem + 2.35vw, $num-24px);
+
+    
+    &.type-for-athlete,
+    &.type-for-adult {
+      &:before {
+        display: inline-block;
+        content: "";
+        background-size: clamp($num-48px, 1.471rem + 4.71vw, $num-80px) clamp($num-48px, 1.471rem + 4.71vw, $num-80px);
+        width: clamp($num-48px, 1.471rem + 4.71vw, $num-80px);
+        height: clamp($num-48px, 1.471rem + 4.71vw, $num-80px);
+        margin-right: $num-4px;
+        margin: 0;
+      }
+
+    }
+
+    &.type-for-athlete {
+      &:before {
+        background-image: url("/assets/images/icon__for-athlete.svg");
+      }
+    }
+
+    &.type-for-adult {
+      &:before {
+        background-image: url("/assets/images/icon__for-adult.svg");
+      }
+    }
+  }
+
+  &__thumbnail {
+    img {
+      width: 100%;
+    }
+  }
+
+  &__description {
+    font-size: clamp($num-16px, 0.809rem + 0.59vw, $num-20px);
+    max-width: 576px;
   }
 }

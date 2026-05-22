@@ -1,0 +1,113 @@
+@use "../00-global" as *;
+
+.trl-global-footer-access {
+  background-image: url("/assets/images/bg__access.webp");
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  background-position: center center;
+  padding: clamp($num-64px, 1.706rem + 7.06vw, $num-112px) 0;
+
+  @media screen and (min-width: $screen-2xlarge) {
+    background-size: cover;
+  }
+
+  &__inner {
+    max-width: $screen-xsmall;
+    text-align: left;
+    margin: 0 auto;
+
+    @media screen and (min-width: $screen-xlarge) {
+      max-width: $screen-large;
+    }
+
+    @media screen and (min-width: $screen-2xlarge) {
+      max-width: $screen-xlarge;
+    }
+  }
+}
+
+.trl-access-info {
+  &__container {
+    background-color: rgba(0,0,0,0.8);
+    color: $white;
+    margin: 0 !important;
+    padding: $num-48px $num-16px;
+    justify-content: center;
+    width: 100%;
+    gap: 32px;
+    
+    @media screen and (min-width: $screen-xsmall) {
+      aspect-ratio: 1 / 1;
+      padding: clamp($num-16px, -0.529rem + 4.71vw, $num-48px);
+    }
+
+    @media screen and (min-width: $screen-xlarge) {
+      padding: 48px;
+      width: 50%;
+    }
+    
+    p {
+      font-size: clamp($num-14px, 0.779rem + 0.29vw, $num-16px);
+    }
+  }
+
+  &__heading {
+    font-size: clamp($num-24px, 1.118rem + 1.18vw, $num-32px);
+    border-bottom: 1px solid $white;
+    padding-bottom: clamp($num-24px, 1.118rem + 1.18vw, $num-32px);
+    width: 100%;
+  }
+
+  &__overview {
+    gap: $num-16px;
+
+    &--container {
+      display: flex;
+      flex-direction: row;
+      gap: $num-12px;
+
+      &:before {
+        display: inline-block;
+        background-color: $col-primary;
+        content: "";
+        mask-size: $num-24px $num-24px;
+        width: $num-24px;
+        height: $num-24px;
+      }
+
+      &.type-location {
+        &:before {
+          mask-image: url("/assets/images/icon__location.svg");
+        }
+      }
+
+      &.type-tel {
+        &:before {
+          mask-image: url("/assets/images/icon__tel.svg");
+        }
+      }
+
+      &.type-timetable {
+        &:before {
+          mask-image: url("/assets/images/icon__timetable.svg");
+        }
+      }
+    }
+
+    &--inner {
+      gap: $num-8px;
+      width: calc(100% - ($num-24px + $num-12px));
+
+      ul {
+        margin: 0;
+        padding: 0;
+      }
+  
+      li {
+        color: $col-primary;
+        font-size: clamp($num-12px, 0.654rem + 0.29vw, $num-14px);
+        list-style: none;
+      }
+    }
+  }
+}

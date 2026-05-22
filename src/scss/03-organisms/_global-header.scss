@@ -2,6 +2,208 @@
 
 .trl-global-header {
   background-color: $col-grayscale-lighter;
-  margin-bottom: 112px;
-  padding: $num-32px 0;
+  text-align: center;
+  padding: $num-16px 0;
+  box-shadow: 0 0 $num-8px rgba(0,0,0,0.16);
+
+  position: fixed;
+  top: 0;
+  z-index: 2;
+  width: 100%;
+
+  @media screen and (min-width: $screen-xlarge) {
+    padding: $num-32px 0;
+  }
+
+  &__inner {
+    margin: 0 auto;
+    padding: 0 $num-16px;
+    width: 100%;
+
+    @media screen and (min-width: $screen-medium) {
+      padding: 0 $num-64px;
+    }
+
+    @media screen and (min-width: $screen-2xlarge) {
+      padding: 0 $num-96px;
+    }
+  }
+}
+
+.trl-global-header-left-col {
+  &__container {
+    max-width: 176px;
+
+    @media screen and (min-width: $screen-2xlarge) {
+      max-width: 240px;
+    }
+  }
+}
+
+.trl-global-header-right-col {
+  &__desktop {
+      display: none;
+  
+    @media screen and (min-width: $screen-xlarge) {
+      display: block;
+    }
+  }
+
+  &__mobile {
+    display: block;
+
+    @media screen and (min-width: $screen-xlarge) {
+      display: none;
+    }
+
+    .wp-block-navigation__responsive-container {
+      padding: $num-32px !important;
+    }
+  }
+}
+
+// デスクトップ用　ナビスタイル
+.trl-global-header-nav-desktop {
+  &__group {
+    gap: $num-48px;
+  }
+
+  &__parent,
+  &__item {
+    font-size: $num-16px;
+
+    @media screen and (min-width: $screen-xlarge) {
+      font-size: $num-14px;
+    }
+
+    @media screen and (min-width: $screen-2xlarge) {
+      font-size: $num-16px;
+    }
+  }
+
+  &__parent {
+    margin: 0;
+    padding: $num-8px !important;
+
+    .wp-block-navigation__submenu-icon {
+      margin-left: $num-12px;
+    }
+
+    > a {
+      pointer-events: none;
+    }
+  }
+
+  
+  &__item {
+    &.type-cta-primary {
+      a {
+        background-color: $col-primary;
+        border-radius: 0;
+        color: $white !important;
+        padding: $num-12px;
+        text-box: trim-both cap alphabetic;
+
+        &:hover {
+          background-color: $col-primary-dark;
+        }
+      }
+    }
+  }
+}
+
+.wp-block-navigation__submenu-container {
+  box-sizing: content-box;
+  
+  li {
+    min-width: 100%;
+    box-sizing: border-box;
+    
+    a {
+      padding: $num-8px !important;
+
+      &:hover {
+        background-color: $col-grayscale-lighter;
+      }
+
+    }
+  }
+}
+
+// モバイル用　ナビスタイル
+.trl-global-header-nav-mobile {
+  &__group {
+    width: 100%;
+    gap: $num-24px;
+
+    .wp-block-navigation__submenu-container {
+      padding: 0 0 $num-24px !important;
+    }
+  }
+
+  &__parent {
+    border-bottom: 1px solid $col-border;
+    width: 100%;
+    gap: $num-8px;
+
+    > a {
+      font-weight: 600;
+      pointer-events: none;
+    }
+  }
+
+  &__item {
+    a {
+      display: flex !important;
+      flex-direction: row;
+      align-items: center;
+      gap: $num-8px;
+  
+      &:after {
+        display: inline-block;
+        background-color: $black;
+        content: "";
+        mask-image: url("/assets/images/icon__arrow--right.svg");
+        mask-size: clamp(1rem, 0.809rem + 0.59vw, 1.25rem) clamp(1rem, 0.809rem + 0.59vw, 1.25rem);
+        width: clamp(1rem, 0.809rem + 0.59vw, 1.25rem);
+        height: clamp(1rem, 0.809rem + 0.59vw, 1.25rem);
+      }
+
+      span {
+        text-box: trim-both cap alphabetic;
+      }
+    }
+
+    &.type-home {
+      a {
+        &:before {
+          display: inline-block;
+          background-color: $black;
+          content: "";
+          mask-image: url("/assets/images/icon__home.svg");
+          mask-size: clamp(1rem, 0.809rem + 0.59vw, 1.25rem) clamp(1rem, 0.809rem + 0.59vw, 1.25rem);
+          width: clamp(1rem, 0.809rem + 0.59vw, 1.25rem);
+          height: clamp(1rem, 0.809rem + 0.59vw, 1.25rem);
+        }
+
+        &:after {
+          display: none;
+        }
+      }
+    }
+
+    &.type-cta-primary {
+      a {
+        background-color: $col-primary;
+        border-radius: 0;
+        color: $white !important;
+        padding: $num-12px !important;
+        text-box: trim-both cap alphabetic;
+
+        &:after {
+          display: none;
+        }
+      }
+    }
+  }
 }

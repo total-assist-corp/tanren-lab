@@ -1,0 +1,29 @@
+@use "../00-global" as *;
+
+.trl-tab-switcher {
+  &__group {
+    gap: clamp($num-16px, 0.235rem + 2.35vw, $num-32px);
+    border-bottom: 1px solid $black;
+    width: 100%;
+  }
+
+  &__item {
+    font-size: clamp($num-16px, 0.809rem + 0.59vw, $num-20px);
+    background-color: $col-grayscale-light;
+    border-radius: $num-16px $num-16px 0 0;
+    padding: clamp($num-12px, 0.368rem + 1.18vw, $num-20px) clamp($num-20px, 0.676rem + 1.76vw, $num-32px);
+    cursor: pointer;
+    border: none;
+
+    &.active {
+      background-color: $black;
+      color: $white;
+    }
+  }
+
+  &__panel {
+    &[hidden] {
+      display: none;
+    }
+  }
+}

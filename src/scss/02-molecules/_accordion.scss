@@ -1,0 +1,114 @@
+@use "../00-global" as *;
+
+.trl-accordion-faq {
+  &__group {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+
+    width: calc(100vw - ($num-16px * 2));
+    
+    @media screen and (min-width: $screen-medium) {
+      width: calc(100vw - ($num-32px * 2));
+    }
+
+    @media screen and (min-width: $screen-large) {
+      width: $screen-medium;
+    }
+  }
+
+  &__item {
+    margin-block-start: 0;
+    margin-block-end: 0;
+    border-top: 1px solid $black;
+    flex: 1;
+
+    &:last-child {
+      border-bottom: 1px solid $black;
+    }
+
+    .wp-block-accordion-panel h5 {
+      font-size: clamp($num-16px, 0.809rem + 0.59vw, $num-20px);
+    }
+
+    .wp-block-accordion-panel ul {
+      margin-block-start: $num-16px;
+      margin-block-end: $num-16px;
+    }
+
+    .wp-block-accordion-heading__toggle-title,
+    .wp-block-accordion-panel p,
+    .wp-block-accordion-panel li {
+      font-size: clamp($num-14px, 0.779rem + 0.29vw, $num-16px);
+    }
+
+    &.is-open {
+      .wp-block-accordion-heading {
+        background-color: $col-grayscale-lighter;
+      }
+    }
+
+    .wp-block-accordion-heading,
+    .wp-block-accordion-panel {
+      margin-block-start: 0;
+      margin-block-end: 0;
+    }
+    
+    .wp-block-accordion-heading {
+      padding: $num-8px $num-8px $num-8px $num-16px;
+    }
+
+    .wp-block-accordion-panel {
+      padding: $num-32px $num-16px;
+    }
+  }
+}
+
+.trl-accordion-branding {
+  border: 1px solid $black;
+  background-color: $white;
+  margin: 0 auto;
+
+  &:hover {
+    border: 1px solid $col-primary;
+    transition: all 0.5s 0s ease;
+    
+    .wp-block-accordion-heading__toggle-title {
+      color: $col-primary;
+      text-decoration: none;
+      transition: all 0.5s 0s ease;
+
+      &:after {
+        background-color: $col-primary;
+        transition: all 0.5s 0s ease;
+      }
+    }
+  }
+
+  // アコーディオンのボタンスタイル
+  .wp-block-accordion-heading__toggle {
+    padding: $num-12px $num-16px;
+  }
+  
+  // ボタン内テキストスタイル
+  .wp-block-accordion-heading__toggle-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    font-size: clamp($num-16px, 0.618rem + 1.18vw, $num-24px);
+    font-weight: 500;
+
+    &:after {
+      display: inline-block;
+      content: "";
+      background-color: $black;
+      mask-image: url("/assets/images/icon__chevron--down.svg");
+      mask-size: $num-24px $num-24px;
+      width: $num-24px;
+      height: $num-24px;
+    }
+    
+  }
+}
+

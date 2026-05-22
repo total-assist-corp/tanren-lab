@@ -1,0 +1,139 @@
+@use "../00-global" as *;
+
+.trl-hero-standard {
+  &__wrapper {
+    background-color: $black;
+    color: $white;
+
+    min-height: clamp(320px, -7.721rem + 85.29vw, 900px);
+    padding: 0;
+  }
+
+  &__inner {
+    max-width: $screen-xlarge;
+
+    padding: clamp($num-48px, -0.824rem + 11.76vw, $num-128px) $num-16px 0;
+
+    @media screen and (min-width: $screen-medium) {
+      padding: clamp($num-48px, -0.824rem + 11.76vw, $num-128px) $num-32px 0;
+    }
+
+    @media screen and (min-width: $screen-xlarge) {
+      padding: clamp($num-48px, -0.824rem + 11.76vw, $num-128px) 0 0;
+      max-width: $screen-large;
+    }
+
+    @media screen and (min-width: $screen-2xlarge) {
+      max-width: $screen-xlarge;
+    }
+  }
+
+  &__container {
+    gap: clamp($num-48px, -1.588rem + 14.12vw, $num-144px);
+  }
+
+  &__page-title {
+    border-bottom: 1px solid $col-primary;
+    font-size: clamp($num-16px, 0.809rem + 0.59vw, $num-20px);
+    padding-bottom: $num-16px;
+  }
+
+  &__contents {
+    gap: clamp($num-24px, -0.412rem + 5.88vw, $num-64px);
+
+    &--heading-set {
+      gap: clamp($num-16px, 0.235rem + 2.35vw, $num-32px);
+    }
+
+    &--label {
+      font-size: clamp($num-12px, 0.176rem + 1.76vw, $num-24px);
+    }
+
+    &--heading {
+      font-size: clamp($num-24px, -0.412rem + 5.88vw, $num-64px);
+      text-shadow: 2px 2px $num-8px rgba(0,0,0,0.24);
+    }
+
+    &--rubi {
+      color: $col-primary;
+      font-size: clamp($num-14px, 0.397rem + 1.47vw, $num-24px);
+    }
+
+    &--lead-copy {
+      font-size: clamp($num-16px, 0.235rem + 2.35vw, $num-32px);
+    }
+  }
+}
+
+.trl-hero-centered {
+  &__wrapper {
+    background-color: $black;
+    color: $white;
+
+    min-height: clamp(320px, -7.721rem + 85.29vw, 900px);
+    padding: 0;
+  }
+
+  &__inner {
+    background-color: rgba(0,0,0,0.8);
+    padding: clamp($num-32px, 0.471rem + 4.71vw, $num-64px);
+    width: fit-content;
+  }
+
+  &__container {
+    gap: clamp($num-32px, 0.471rem + 4.71vw, $num-64px);
+  }
+
+  &__page-title {
+    border-bottom: 1px solid $col-primary;
+    font-size: clamp($num-16px, 0.809rem + 0.59vw, $num-20px);
+    padding-bottom: $num-16px;
+  }
+
+  &__heading {
+    font-size: clamp($num-24px, -0.412rem + 5.88vw, $num-64px);
+    text-shadow: 2px 2px $num-8px rgba(0,0,0,0.24);
+  }
+
+  &__lead-copy {
+    font-size: clamp($num-16px, 0.235rem + 2.35vw, $num-32px);
+  }
+}
+
+.trl-hero-home {
+  &__wrapper {
+    background-color: $black;
+    color: $white;
+
+    min-height: clamp(320px, -7.721rem + 85.29vw, 900px);
+    padding: 0;
+  }
+
+  &__inner {
+    padding: clamp($num-32px, 1.235rem + 2.35vw, $num-48px);
+  }
+
+  &__container {
+    gap: clamp($num-16px, 0.235rem + 2.35vw, $num-32px);
+  }
+
+  &__heading {
+    font-size: clamp($num-24px, -0.412rem + 5.88vw, $num-64px);
+    text-shadow: 2px 2px $num-8px rgba(0,0,0,0.24);
+  }
+
+  &__lead-copy {
+    font-size: clamp($num-16px, 0.235rem + 2.35vw, $num-32px);
+  }
+}
+
+.trl-hero-pricing {
+  &__container {
+    padding: clamp($num-48px, 0.706rem + 7.06vw, $num-96px) 0;
+    min-height: unset;
+
+    h2 {
+
+    }
+  }
+}

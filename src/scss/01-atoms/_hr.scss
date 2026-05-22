@@ -1,0 +1,24 @@
+@use "../00-global" as *;
+
+.wp-block-separator {
+  margin-block-start: clamp($num-48px, 0.706rem + 7.06vw, $num-96px);
+  margin-block-end: clamp($num-48px, 0.706rem + 7.06vw, $num-96px);
+
+  width: 50%;
+}
+
+.trl-separator-profile {
+  margin-block-start: 0;
+  margin-block-end: 0;
+  border-top: 1px solid;
+  color: $black;
+  width: 100%;
+}
+
+.trl-separator-career {
+  margin-block-start: 0;
+  margin-block-end: 0;
+  border-top: 1px solid;
+  color: $col-grayscale;
+  width: 100%;
+}

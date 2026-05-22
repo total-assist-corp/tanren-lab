@@ -22,4 +22,77 @@
       flex-basis: 64px;
     }
   }
+
+  &.h-128 {
+    height: 64px !important;
+    flex-basis: 64px;
+  
+    @media screen  and (min-width: $screen-medium) {
+      height: 128px !important;
+      flex-basis: 128px;
+    }
+  }
+}
+
+// セクション用
+.trl-trainer-profile,
+.trl-three-reasonsto-choose {
+  gap: clamp($num-32px, 0.471rem + 4.71vw, $num-64px);
+}
+
+.trl-things-we-do-in-conditioning,
+.trl-four-promises,
+.trl-meaning-of-tanren {
+  gap: clamp($num-24px, 0.353rem + 3.53vw, $num-48px);
+}
+
+.trl-four-promises {
+  position: relative;
+}
+
+$WIDTH: calc((100% - (clamp($num-16px, -0.529rem + 4.71vw, $num-48px) * 2)) / 3);
+
+.trl-target-audience {
+  flex-direction: column;
+  gap: clamp($num-16px, -0.529rem + 4.71vw, $num-48px);
+
+  @media screen  and (min-width: $screen-large) {
+    flex-direction: row;
+  }
+
+  > .wp-block-group {
+    &:first-child {
+      align-items: center;
+      flex: 0 1 $WIDTH;
+      width: 100%;
+
+      @media screen  and (min-width: $screen-large) {
+        align-items: flex-start;
+      }
+    }
+
+    &:last-child {
+      flex: 0 1 calc(($WIDTH * 2) + clamp($num-16px, -0.529rem + 4.71vw, $num-48px));
+    }
+  }
+}
+
+.spacer-16 {
+  gap: clamp($num-12px, 0.559rem + 0.59vw, $num-16px);
+}
+
+.spacer-32 {
+  gap: clamp($num-16px, 0.235rem + 2.35vw, $num-32px);
+}
+
+.spacer-48 {
+  gap: clamp($num-24px, 0.353rem + 3.53vw, $num-48px);
+}
+
+.spacer-64 {
+  gap: clamp($num-32px, 0.471rem + 4.71vw, $num-64px);
+}
+
+.spacer-96 {
+  gap: clamp($num-48px, 0.706rem + 7.06vw, $num-96px);
 }
