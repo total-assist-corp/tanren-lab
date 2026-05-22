@@ -1,0 +1,42 @@
+@use "../00-global" as *;
+
+.trl-text-and-media {
+  &__group {
+    gap: clamp($num-16px, -2.824rem + 11.76vw, $num-96px);
+    flex-direction: column;
+
+    @media screen and (min-width: $screen-medium) {
+      flex-direction: row;
+    }
+
+    &.type-reversed {
+      @media screen and (min-width: $screen-medium) {
+        flex-direction: row-reverse;
+      }
+    }
+  }
+
+  &__item {
+    max-width: 576px;
+    flex: 1;
+    gap: clamp($num-24px, 0.353rem + 3.53vw, $num-48px);
+
+    @media screen and (min-width: $screen-medium) {
+      max-width: $screen-xlarge;
+    }
+
+    &--heading {
+      line-height: 160%;
+      text-align: center;
+      width: 100%;
+
+      @media screen and (min-width: $screen-medium) {
+        text-align: left;
+      }
+    }
+
+    &--description {
+
+    }
+  }
+}

@@ -41,54 +41,203 @@
 
 .button-type {
   &__primary {
-    a {
+    .wp-block-button__link {
       background-color: $col-primary;
       border-radius: 0;
       color: $white;
 
       &:hover {
-        background-color: $col-secondary;
+        background-color: $col-primary-dark;
       }
     }
   }
 
   &__secondary {
-    a {
+    .wp-block-button__link {
       background-color: $black;
       border-radius: 0;
       color: $white;
 
       &:hover {
-        background-color: $col-secondary;
+        background-color: $col-primary-dark;
       }
     }
   }
 
   &__dotted {
-    a {
+    .wp-block-button__link {
       background-color: transparent;
       border: 1px dotted $black;
       border-radius: 0;
       color: $black;
 
       &:hover {
-        border-color: $col-secondary;
-        color: $col-secondary;
+        border-color: $col-primary-dark;
+        color: $col-primary-dark;
       }
     }
   }
 
   &__dotted-inversed {
-    a {
+    .wp-block-button__link {
       background-color: transparent;
       border: 1px dotted $white;
       border-radius: 0;
       color: $white;
 
       &:hover {
-        border-color: $col-secondary;
-        color: $col-secondary;
+        border-color: $col-primary-dark;
+        color: $col-primary-dark;
       }
     }
+  }
+}
+
+.trl-button-large {
+  &__group {
+
+  }
+
+  &__item {
+    .wp-block-button__link {
+      border-radius: 0;
+      padding: $num-20px;
+      text-box: trim-both cap alphabetic;
+
+      font-size: clamp($num-16px, 0.618rem + 1.18vw, $num-24px);
+    }
+    
+    &.type-filled {
+      .wp-block-button__link {
+        background-color: $col-primary;
+        color: $white;
+
+        &:hover {
+          background-color: $col-primary-dark;
+        }
+      }
+    }
+
+    &.type-outlined {
+      .wp-block-button__link {
+        background-color: $white;
+        border: 1px solid $black;
+        color: $black;
+
+        &:hover {
+          border: 1px solid $col-primary;
+          color: $col-primary;
+        }
+      }
+    }
+  }
+}
+
+.trl-button-medium {
+  &__group {
+
+  }
+
+  &__item {
+    .wp-block-button__link {
+      border-radius: 0;
+      padding: $num-12px;
+      text-box: trim-both cap alphabetic;
+    }
+    
+    &.type-filled {
+      .wp-block-button__link {
+        background-color: $col-primary;
+        color: $white;
+
+        &:hover {
+          background-color: $col-primary-dark;
+        }
+      }
+    }
+
+    &.type-outlined {
+      .wp-block-button__link {
+        background-color: $white;
+        border: 1px solid $black;
+        color: $black;
+
+        &:hover {
+          border: 1px solid $col-primary;
+          color: $col-primary;
+        }
+      }
+    }
+
+    &.type-outlined-inversed {
+      .wp-block-button__link {
+        background-color: transparent;
+        border: 1px solid $white;
+        color: $white;
+
+        &:hover {
+          border: 1px solid $col-primary;
+          color: $col-primary;
+        }
+      }
+    }
+  }
+}
+
+.trl-button-xtra-small {
+  &__group {
+
+  }
+
+  &__item {
+    .wp-block-button__link {
+      border-radius: 0;
+      padding: $num-8px;
+      text-box: trim-both cap alphabetic;
+      font-size: $num-12px;
+    }
+
+    &.type-outlined {
+      .wp-block-button__link {
+        background-color: transparent;
+        border: 1px solid $white;
+        color: $white;
+
+        &:hover {
+          border: 1px solid $col-primary;
+          color: $col-primary;
+        }
+      }
+    }
+  }
+}
+
+// SNSボタン
+.trl-button-social {
+  border: 2px solid $black;
+  border-radius: 999px;
+  padding: $num-8px;
+
+  &:hover {
+    border: 2px solid $col-primary;
+
+    svg {
+      path {
+        stroke: $col-primary;
+        transition: all 0.5s 0s ease;
+      }
+    }
+  }
+
+  .wp-block-safe-svg-svg-icon {
+    line-height: 1;
+    width: $num-24px;
+    height: $num-24px;
+  }
+
+  svg {
+    width: $num-24px;
+    height: $num-24px;
+    fill: transparent;
   }
 }

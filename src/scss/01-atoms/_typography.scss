@@ -54,6 +54,35 @@ p {
   margin-block-start: 0 !important;
 }
 
+.trl-heading-with-avatar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: $num-20px;
+  font-size: clamp($num-32px, 1.235rem + 2.35vw, $num-48px);
+
+  &:before {
+    content: "";
+    display: inline-block;
+    background-size: cover;
+    width: $num-112px;
+    height: $num-112px;
+    border-radius: 50%;
+  }
+
+  &.type-training-area {
+    &:before {
+      background-image: url("/assets/images/avatar__training-area.webp");
+    }
+  }
+
+  &.type-treatment-area {
+    &:before {
+      background-image: url("/assets/images/avatar__treatment-area.webp");
+    }
+  }
+}
+
 .absolute-line-break {
   display: inline;
 

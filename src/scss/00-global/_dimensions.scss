@@ -5,6 +5,7 @@ $screen-small:    600px !default; // Mini Tablet
 $screen-medium:   782px !default; // Tablet - was 768px
 $screen-large:    1040px !default; // Desktop - was 960px
 $screen-xlarge:   1200px !default; // Large Desktop
+$screen-2xlarge:  1400px !default; // Extra Large Desktop
 $screen-max:      2000px !default; // TV
 
 $screen-smartphone-portrait: 601px !default;
@@ -32,3 +33,6 @@ $num-64px: 4rem;
 $num-72px: 4.5rem;
 $num-80px: 5rem;
 $num-96px: 6rem;
+$num-112px: 7rem;
+$num-128px: 8rem;
+$num-144px: 9rem;

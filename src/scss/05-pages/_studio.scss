@@ -1,0 +1,33 @@
+@use "../00-global" as *;
+
+.trl-studio {
+  &__wrapper {
+    margin-block-start: 0;
+    margin-block-end: 0;
+  }
+  
+  &__container {
+    gap: clamp($num-32px, 0.471rem + 4.71vw, $num-64px);
+    color: $white;
+    padding: 0 $num-16px 0;
+
+    @media screen and (min-width: $screen-medium) {
+      padding: 0 $num-32px 0;
+    }
+
+    @media screen and (min-width: $screen-xlarge) {
+      max-width: $screen-large;
+      padding: 0;
+    }
+
+    @media screen and (min-width: $screen-2xlarge) {
+      max-width: $screen-xlarge;
+    }
+  }
+}
+
+.trl-other {
+  &__wrapper {
+
+  }
+}

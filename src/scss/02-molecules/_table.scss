@@ -1,0 +1,25 @@
+@use "../00-global" as *;
+
+.trl-table-timetable-standard {
+  box-sizing: border-box;
+
+  thead {
+    border-bottom: none;
+  }
+
+  th,
+  td {
+    border-color: $col-grayscale-darker;
+    font-size: clamp($num-14px, 0.779rem + 0.29vw, $num-16px);
+    width: auto;
+    text-align: center;
+
+    &:first-child {
+      width: 112px;
+
+      @media screen and (min-width: $screen-medium) {
+        width: 120px;
+      }
+    }
+  }
+}

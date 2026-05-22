@@ -1,0 +1,105 @@
+@use "../00-global" as *;
+
+.trl-overview-section {
+  &__container {
+    width: 100%;
+    margin-left: 0 !important;
+    gap: clamp($num-16px, 0.235rem + 2.35vw, $num-32px);
+
+    @media screen and (min-width: $screen-medium) {
+      width: 50%;
+    }
+  }
+
+  &__time {
+    color: $col-primary;
+    font-size: clamp($num-12px, 0.368rem + 1.18vw, $num-16px);
+    font-weight: 600;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: $num-8px;
+
+    &:before {
+      display: inline-block;
+      background-color: $col-primary;
+      content: "";
+      mask-image: url("/assets/images/icon__timer.svg");
+      mask-size: clamp($num-16px, 0.618rem + 1.18vw, $num-24px) clamp($num-16px, 0.618rem + 1.18vw, $num-24px);
+      width: clamp($num-16px, 0.618rem + 1.18vw, $num-24px);
+      height: clamp($num-16px, 0.618rem + 1.18vw, $num-24px);
+    }
+  }
+
+  &__heading,
+  &__description {
+    color: $black;
+  }
+
+  &__heading {
+    font-size: clamp($num-20px, 0.676rem + 1.76vw, $num-32px);
+  }
+
+  &__description {
+    font-size: clamp($num-16px, 0.809rem + 0.59vw, $num-20px);
+  }
+}
+
+.type-session-bg {
+  img {
+    left: unset !important;
+    object-fit: cover !important;
+    opacity: 0.24;
+
+    @media screen and (min-width: $screen-medium) {
+      opacity: 1;
+    }
+  }
+
+  .wp-block-cover__inner-container {
+    background-image: transparent;
+
+    @media screen and (min-width: $screen-medium) {
+      background-image: linear-gradient(90deg, #ffffff, transparent 80%);
+    }
+  }
+}
+
+.section-arrow-type-a,
+.section-arrow-type-b  {
+  position: relative;
+  margin-block-start: 0;
+  margin-block-end: 0;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: -1px;
+    transform: translateX(-50%);
+    
+    width: clamp($num-128px, 1.882rem + 18.82vw, 256px);
+    height: clamp($num-64px, 0.941rem + 9.41vw, $num-128px);
+    
+    clip-path: polygon(0 0, 100% 0, 50% 100%);
+  }
+}
+
+.section-arrow-type-a {
+  background: $col-grayscale-darkest;
+  padding: 0 0 clamp($num-96px, 1.412rem + 14.12vw, 192px);
+
+  &::before {
+    background: $black;
+  }
+}
+
+.section-arrow-type-b {
+  background: $white;
+  padding: 0 0 clamp($num-64px, 0.941rem + 9.41vw, $num-128px);
+
+  &::before {
+    background: $col-grayscale-darkest;
+  }
+}

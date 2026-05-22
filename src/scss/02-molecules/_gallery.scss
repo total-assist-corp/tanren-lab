@@ -1,0 +1,20 @@
+@use "../00-global" as *;
+
+.trl-gallery {
+  &__container {
+    gap: clamp($num-16px, -0.529rem + 4.71vw, $num-48px) !important;
+    flex-wrap: wrap;
+
+    > figure {
+      flex: 0 1 calc(50% - clamp($num-16px, -0.529rem + 4.71vw, $num-48px));
+    }
+  }
+}
+
+.trl__bg-gallery {
+  &__container {
+    margin-block-start: 0;
+    margin-block-end: 0;
+    min-height: clamp(320px, -7.721rem + 85.29vw, 900px);
+  }
+}

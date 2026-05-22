@@ -1,11 +1,17 @@
 @use "../00-global" as *;
 
-// .entry-content {
-//   & > section {
-//     margin-block-start: 120px;
-//     margin-block-end: 120px;
-//   }
-// }
+.entry-content {
+  margin-block-start: 67px;
+  margin-block-end: 0;
+
+  @media screen and (min-width: $screen-xlarge) {
+    margin-block-start: 99px;
+  }
+
+    @media screen and (min-width: $screen-2xlarge) {
+    margin-block-start: 112px;
+  }
+}
 
 html {
   scroll-behavior: smooth;
@@ -172,6 +178,20 @@ html {
 }
 
 // 背景色の設定
+.bg-black {
+  background-color: $black;
+  color: $white;
+
+  p {
+    color: $col-grayscale;
+  }
+}
+
+.bg-gray-darkest {
+  background-color: $col-grayscale-darkest;
+}
+
+
 .bg-gray {
   background-color: $col-background;
   padding: $num-48px 0;
@@ -190,13 +210,12 @@ html {
   }
 }
 
+.bg-baige {
+  background-color: $baige;
+}
+
 .bg-white {
   background-color: $white;
-  margin: $num-64px 0;
-
-  @media screen and (min-width: $screen-small) {
-    margin: $num-96px 0;
-  }
 }
 
 .bg-vision {
@@ -208,3 +227,88 @@ html {
   background: linear-gradient(to bottom, $white, $col-primary-light);
 }
 
+// Wrapper
+.trl-wrapper-128 {
+  &__wrapper {
+    margin-block-start: 0;
+    margin-block-end: 0;
+    padding: 0;
+
+    .wp-block-group {
+      margin-block-start: 0;
+      margin-block-end: 0;
+    }
+
+    // カバーブロック使用時の高さのリセット
+    &.wp-block-cover {
+      min-height: unset !important;
+    }
+  }
+  
+  &__container {
+    padding: clamp($num-64px, 0.941rem + 9.41vw, $num-128px) $num-16px;
+
+    @media screen and (min-width: $screen-medium) {
+      padding: clamp($num-64px, 0.941rem + 9.41vw, $num-128px) $num-32px;
+    }
+
+    @media screen and (min-width: $screen-xlarge) {
+      max-width: $screen-large;
+      padding: clamp($num-64px, 0.941rem + 9.41vw, $num-128px) 0;
+    }
+
+    @media screen and (min-width: $screen-2xlarge) {
+      max-width: $screen-xlarge;
+    }
+  }
+}
+
+.type-bg-target-audience {
+  display: none;
+      
+  @media screen and (min-width: $screen-large) {
+    display: block;
+    background-image: url("/assets/images/bg__target-audience.webp");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    mix-blend-mode: multiply;
+    width: calc((100% - (clamp($num-16px, -0.529rem + 4.71vw, $num-48px) * 2)) / 3);
+    height: 368px;
+    object-fit: contain;
+
+    position: absolute;
+    bottom: 0;
+    left: 32px;
+  }
+
+  @media screen and (min-width: $screen-xlarge) {
+    left: 0;
+  }
+}
+
+.trl-wrapper-flexible { 
+  &__container {
+    margin-block-start: 0;
+    margin-block-end: 0;
+    padding: 0 $num-16px;
+
+    @media screen and (min-width: $screen-medium) {
+      padding: 0 $num-32px;
+    }
+
+    @media screen and (min-width: $screen-xlarge) {
+      max-width: $screen-large;
+      padding: 0;
+    }
+
+    @media screen and (min-width: $screen-2xlarge) {
+      max-width: $screen-xlarge;
+    }
+  }
+}
+
+.trl-margin-killer {
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
